@@ -26,10 +26,10 @@ if __name__ == "__main__":
         transforms.RandomCrop(32, padding = 4),
         transforms.RandomHorizontalFlip(),
         transforms.ToTensor(),
-        transforms.Normalize((0.53129727, 0.5259391, 0.52069134), (0.28938246, 0.28505746, 0.27971658))])
+        transforms.Normalize((0.4914, 0.4822, 0.4465), (0.247, 0.243, 0.261))])
     transform_test = transforms.Compose([
         transforms.ToTensor(),
-        transforms.Normalize((0.53129727, 0.5259391, 0.52069134), (0.28938246, 0.28505746, 0.27971658))])
+        transforms.Normalize((0.4914, 0.4822, 0.4465), (0.247, 0.243, 0.261))])
 
     trainset = CIFAR10("/home/tinyalpha/dataset/cifar10", transform = transform_train, train = True)
     trainloader = torch.utils.data.DataLoader(trainset, batch_size = 128, shuffle = True, num_workers = 2)
