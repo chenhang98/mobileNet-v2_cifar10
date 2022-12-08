@@ -9,8 +9,9 @@ a pytorch implement of mobileNet v2 on cifar10
 
 ### training
 
-* Run `python3 train.py` to start training
+* Run `python3 train.py` to start training 
 * Run `python3 plot.py` to show training curve
+* Or you can run `python3 train_ddp.py` using ddp and cosine scheduler(final validacc = 94.71%)
 
 * I have trained this model (width multiplier = 1, more setups can be seen in `train.py`) on two titan x, which takes about 6 hours, the weights and logs are available in folder `bak`
 
